@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Heading, Text, VStack, Image, Input, Button, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import { FaSearch, FaHeart, FaComments } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const RecipeCard = ({ title, image, likes, comments }) => {
   const bg = useColorModeValue('white', 'gray.800');
@@ -44,7 +45,9 @@ const Index = () => {
           </SimpleGrid>
 
           <Box textAlign="center" mt={8}>
-            <Button colorScheme="teal" size="lg">Share Your Recipe</Button>
+            <Link to="/submit-recipe">
+              <Button colorScheme="teal" size="lg">Share Your Recipe</Button>
+            </Link>
           </Box>
         </VStack>
       </Container>
